@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="../static/img/fav.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Home-Mobile Voting</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
+
+        <link href="../static/css/bootstrap.css" rel="stylesheet" />
+        <link href="../static/css/landing-page.css" rel="stylesheet"/>
+
+        <!--     Fonts and icons     -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+        <link href="../static/css/pe-icon-7-stroke.css" rel="stylesheet" />
+        <style>
+            .parallax 
+            {
+            background-image: url('../static/img/bg.jpg');
+            
+            }
+            
+        </style>
+    </head>
+    <body class="landing-page landing-page2">
+        <!-- <nav class="navbar navbar-transparent navbar-top" role="navigation"> -->
+        <nav class="navbar navbar-top" role = "navigation" style="background-color: rgba(0,0,0,0);">
+        <div class="container-fluid">
+          
+          <ul class="nav navbar-left">
+            <li><a href="/" style="color: white" onmouseover="this.style.color ='gray'" onmouseout="this.style.color ='white'">Home</a></li>
+          </ul>
+          <ul class="nav navbar-left">
+            <li><a href="/about" style="color: white" onmouseover="this.style.color ='gray'" onmouseout="this.style.color ='white'">About</a></li>
+          </ul>
+          {% if session.logged_in %}
+            <ul class="nav navbar-right">
+              <li><a href="/dashboard" style="color: white" onmouseover="this.style.color ='gray'" onmouseout="this.style.color ='white'">Dashboard</a></li>
+            </ul>
+            <ul class="nav navbar-right">
+              <li><a href="/logout" style="color: white" onmouseover="this.style.color ='gray'" onmouseout="this.style.color ='white'">Logout</a></li>
+            </ul>
+          {% else %}
+            <ul class="nav navbar-right">
+              <li><a href="/login" style="color: white" onmouseover="this.style.color ='gray'" onmouseout="this.style.color ='white'">Login as Voter/Candidate</a></li>
+            </ul>
+            <ul class="nav navbar-right">
+              <li><a href="/login_electionofficer" style="color: white" onmouseover="this.style.color ='gray'" onmouseout="this.style.color ='white'">Login as Election Officer</a></li>
+            </ul>
+            <ul class="nav navbar-right">
+              <li><a href="/register" style="color: white" onmouseover="this.style.color ='gray'" onmouseout="this.style.color ='white'">Register as Voter</a></li>
+            </ul>
+            <ul class="nav navbar-left">
+                    <li><a href="/results" style="color: white" onmouseover="this.style.color ='gray'" onmouseout="this.style.color ='white'">Results</a></li>
+            </ul>
+            
+
+          {% endif %}
+        </div>
+      </nav>
+        <div class="wrapper">
+            <div class="parallax filter-gradient" data-color="blue">
+                <div class= "container">
+                    <div class="row">
+s                        <div class="col-md-5" style="margin-left: 28%;">
+                            <div class="description text-center">
+                                <h2>Online Voting- A Web Application</h2>
+                                <br>
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-gray section-clients">
+                <div class="container text-center">
+                    <h4 class="header-text">Purpose and Motivation</h4>
+                    <p>
+                        We have tried designing the application based onthe actual workings of the Election Commision of India and the way the actual elections are conducted. Below all the steps are described in detail to make the user understand how the website works.<br>
+                    </p>
+                    <div class="logos">
+                        <ul class="list-unstyled">
+                            <li ><img src="../static/img/logos/aadhaar.png" width="50%" height="50%" /></li>
+                            <li ><img src="../static/img/logos/eci.png" width="40%" height="40%"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-presentation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 hidden-xs">
+                            <div class="description">
+                                <h4 class="header-text">Step 1: Register as a Voter</h4>
+                                <p>The first and foremost step in the voting procedure is to register yourself as a voter. 
+                                </p>
+                                <p>By the basic knowledge of how a voting and electoral system works, it is a prerequisite for any candidate to be first registered as a voter. So is for an Election officer. Thus, this is a necessary step towards using the election portal in any case.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="../static/img/showcases/showcase-2/mac2.jpg" style="margin-top:-50px"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-demo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="demo-image">
+                                <img src="../static/img/showcases/showcase-2/examples/home_4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1">
+                            <h4 class="header-text">REGISTERING AS A CANDIDATE</h4>
+                            <p>
+                                This is not a necessary step for everyone. Only those users need to register themselves as candidates, who wish to contest the elections. A candidate has to provide a photo, a scanned copy of authentic signature and the Constituency name that he wishes to contest elections from.
+                            </p>
+                            <p>
+                                Upon registration as a candidate, a dashboard different than that of a voter will be visible.
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h4 class="header-text">Step 2: Login</h4>
+                            <p>
+                                After the successful registering of the voter the person is requires to login as Voter or Candidate as per the criterion satisfied. Then a dashboard appears that has options to cast a vote and to view results afterwards.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-md-offset-1">
+                            <div class="demo-image">
+                                <img src="../static/img/showcases/showcase-2/examples/home_6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <br><br><br><br><br><br><br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="demo-image">
+                                <img src="../static/img/showcases/showcase-2/examples/home_7.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1">
+                            <h4 class="header-text">STEP3: CAST VOTE</h4>
+                            <p>
+                               Once you have logged in, and you are on your Dashboard, you can now view all your profile details and have an option to case the vote, clicking on which will lead you to a secure portal where you can cast the vote and later see the results also.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-features">
+                <div class="container">
+                    <h4 class="header-text text-center">Features</h4>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card card-blue">
+                                <div class="icon">
+                                    <i class="pe-7s-pen"></i>
+                                </div>
+                                <div class="text">
+                                    <h4>Flask and MySQL</h4>
+                                    <p>All the back-end has been developed by Flask and all the database has been maintained by MySQL Server.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-blue">
+                                <div class="icon">
+                                    <i class="pe-7s-look"></i>
+                                </div>
+                                <h4>Secured Data</h4>
+                                <p>We have secured all the data using inbuilt sha script so that no-one can decode the data. All the data lies in the encrypted format.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-blue">
+                                <div class="icon">
+                                    <i class="pe-7s-like"></i>
+                                </div>
+                                <h4>Convinient</h4>
+                                <p>
+                                	The application i easy to use with enough features and is very comfortable.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card card-blue">
+                                <div class="icon">
+                                    <i class="pe-7s-piggy"></i>
+                                </div>
+                                <h4>Big Cost-Saver</h4>
+                                <p>The web-application saves the need for the poll booth and the cost is reduced to a great extent.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+    </body>
+    <script src="../static/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../static/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script src="../static/js/bootstrap.js" type="text/javascript"></script>
+    <script src="../static/js/awesome-landing-page.js" type="text/javascript"></script>
+</html>
